@@ -9,6 +9,7 @@ def main() -> None:
     Main execution of this script
     :return: No return
     '''
+    
     crack_wifi("Faronics-Guest")
 
 
@@ -19,6 +20,7 @@ def crack_wifi(wifi_name: str, continue_from_pass: str = None) -> None:
     :param continue_from_pass: The password to start from if resuming the algorithm
     :return: None, results are logged in print statements
     '''
+    
     wifi: typing.PyWiFi = pywifi.PyWiFi()
     status: int = pywifi.const
     ifaces: typing.Interface = wifi.interfaces()[0]
