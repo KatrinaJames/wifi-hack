@@ -9,7 +9,7 @@ def main() -> None:
     Main execution of this script
     :return: No return
     '''
-    crack_wifi("Faronics-Guest", '100279')
+    crack_wifi("Faronics-Guest")
 
 
 def crack_wifi(wifi_name: str, continue_from_pass: str = None) -> None:
