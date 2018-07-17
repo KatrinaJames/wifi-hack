@@ -33,6 +33,8 @@ def crack_wifi(wifi_name: str, continue_from_pass: str = None) -> None:
 
     profile.cipher: int = pywifi.const.CIPHER_TYPE_CCMP
 
+    # the top 100K most common passwords should account for roughly 30% success rate
+    # the top 1mil most common passwords should account for roughly 33% success rate
     with open('10-million-password-list-top-100000.txt') as pass_file:
         rows: list[str] = pass_file.readlines()
         passwords: list[str] = [row.strip() for row in rows]
